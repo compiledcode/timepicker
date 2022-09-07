@@ -240,7 +240,7 @@
     selected_02h = temp;
   };
 
-  
+
   const hour_3 = async () => {
     let temp = selected_03h === "" ? "circle-me" : "";
     await clearAllSelected();
@@ -577,13 +577,14 @@
           on:click={minute_45}
           style="float:left;"
           class={selected_45m}
-          id="45m">45</span
-        ><span
+          id="45m">45
+        </span>
+        <span
           on:click={minute_15}
           style="float:right;"
           class={selected_15m}
-          id="15m">15</span
-        >
+          id="15m">15
+        </span>
       </div>
 
       <div class="numbers" style="-webkit-transform:rotateZ(30deg);">
@@ -647,19 +648,32 @@
           on:click={minute_10}
           style="float:left; -webkit-transform:rotateZ(-150deg);"
           class={selected_10m}
-          id="10m">10</span
-        ><span
+          id="10m">10
+        </span>
+        <span
           on:click={minute_40}
           style="float:right; -webkit-transform:rotateZ(-150deg);"
           class={selected_40m}
-          id="40m">40</span
-        >
+          id="40m">40
+        </span>
       </div>
     </card>
   </div>
+
+  <button class="save-button">Save</button>
+
 </div>
 
 <style>
+
+  .save-button {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    border: 3px solid navy;
+    padding: 7px;
+  }
+  
   .circle-me {
     position: relative;
     width: 60px;
