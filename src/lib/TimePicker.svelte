@@ -1,15 +1,18 @@
-<!-- lib/Clock.svelte -->
+
 <svelte:options tag="time-picker" />
 
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
-
+ 
+ 
   let count: number = 0; //debug
   let hour12card: any;
   let hour24card: any;
   let minutecard: any;
   let minutedisplay: any;
   let hourdisplay: any;
+  let hourTextBox: any;
+  let minuteTextBox: any;
 
   // apply CSS to selected minute
   //
@@ -122,6 +125,7 @@
 
   onMount(() => {
     hour24panel(); //initialize the app - show 24-hour panel
+    hourTextBox.value='08'  //default shift start time(s) 08:00AM -- default unless otherwise specified
   });
 
   onDestroy(() => {
@@ -135,6 +139,7 @@
     let temp = selected_00m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "00";
+    minuteTextBox.value='00';
     selected_00m = temp;
   };
 
@@ -142,6 +147,7 @@
     let temp = selected_05m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "05";
+    minuteTextBox.value='05';
     selected_05m = temp;
   };
 
@@ -149,6 +155,7 @@
     let temp = selected_10m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "10";
+    minuteTextBox.value='10';
     selected_10m = temp;
   };
 
@@ -156,6 +163,7 @@
     let temp = selected_15m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "15";
+    minuteTextBox.value='15';
     selected_15m = temp;
   };
 
@@ -163,6 +171,7 @@
     let temp = selected_20m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "20";
+    minuteTextBox.value='20';
     selected_20m = temp;
   };
 
@@ -170,6 +179,7 @@
     let temp = selected_25m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "25";
+    minuteTextBox.value='25';
     selected_25m = temp;
   };
 
@@ -177,6 +187,7 @@
     let temp = selected_30m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "30";
+    minuteTextBox.value='30';
     selected_30m = temp;
   };
 
@@ -184,6 +195,7 @@
     let temp = selected_35m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "35";
+    minuteTextBox.value='35';
     selected_35m = temp;
   };
 
@@ -191,6 +203,7 @@
     let temp = selected_40m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "40";
+    minuteTextBox.value='40';
     selected_40m = temp;
   };
 
@@ -198,6 +211,7 @@
     let temp = selected_45m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "45";
+    minuteTextBox.value='45';
     selected_45m = temp;
   };
 
@@ -205,6 +219,7 @@
     let temp = selected_50m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "50";
+    minuteTextBox.value='50';
     selected_50m = temp;
   };
 
@@ -212,6 +227,7 @@
     let temp = selected_55m === "" ? "circle-me" : "";
     await clearAllSelected();
     minutedisplay.innerHTML = "55";
+    minuteTextBox.value='55';
     selected_55m = temp;
   };
 
@@ -223,6 +239,7 @@
     let temp = selected_00h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "00";
+    hourTextBox.value='00';
     selected_00h = temp;
   };
 
@@ -230,6 +247,7 @@
     let temp = selected_01h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "1";
+    hourTextBox.value='1';
     selected_01h = temp;
   };
 
@@ -237,6 +255,7 @@
     let temp = selected_02h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "2";
+    hourTextBox.value='2';
     selected_02h = temp;
   };
 
@@ -245,6 +264,7 @@
     let temp = selected_03h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "3";
+    hourTextBox.value='3';
     selected_03h = temp;
   };
 
@@ -252,6 +272,7 @@
     let temp = selected_04h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "4";
+    hourTextBox.value='4';
     selected_04h = temp;
   };
 
@@ -259,6 +280,7 @@
     let temp = selected_05h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "5";
+    hourTextBox.value='5';
     selected_05h = temp;
   };
 
@@ -266,6 +288,7 @@
     let temp = selected_06h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "6";
+    hourTextBox.value='6';
     selected_06h = temp;
   };
 
@@ -273,6 +296,7 @@
     let temp = selected_07h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "7";
+    hourTextBox.value='7';
     selected_07h = temp;
   };
 
@@ -280,6 +304,7 @@
     let temp = selected_08h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "8";
+    hourTextBox.value='8';
     selected_08h = temp;
   };
 
@@ -287,6 +312,7 @@
     let temp = selected_09h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "9";
+    hourTextBox.value='9';
     selected_09h = temp;
   };
 
@@ -294,6 +320,7 @@
     let temp = selected_10h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "10";
+    hourTextBox.value='10';
     selected_10h = temp;
   };
 
@@ -301,6 +328,7 @@
     let temp = selected_11h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "11";
+    hourTextBox.value='11';
     selected_11h = temp;
   };
 
@@ -308,6 +336,7 @@
     let temp = selected_12h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "12";
+    hourTextBox.value='12';
     selected_12h = temp;
   };
 
@@ -315,6 +344,7 @@
     let temp = selected_02h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "13";
+    hourTextBox.value='13';
     selected_13h = temp;
   };
 
@@ -322,6 +352,7 @@
     let temp = selected_14h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "14";
+    hourTextBox.value='14';
     selected_14h = temp;
   };
 
@@ -329,6 +360,7 @@
     let temp = selected_15h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "15";
+    hourTextBox.value='15';
     selected_15h = temp;
   };
 
@@ -336,6 +368,7 @@
     let temp = selected_16h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "16";
+    hourTextBox.value='16';
     selected_16h = temp;
   };
 
@@ -343,6 +376,7 @@
     let temp = selected_17h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "17";
+    hourTextBox.value='17';
     selected_17h = temp;
   };
 
@@ -350,6 +384,7 @@
     let temp = selected_18h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "18";
+    hourTextBox.value='18';
     selected_18h = temp;
   };
 
@@ -357,6 +392,7 @@
     let temp = selected_19h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "19";
+    hourTextBox.value='19';
     selected_19h = temp;
   };
 
@@ -364,6 +400,7 @@
     let temp = selected_20h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "20";
+    hourTextBox.value='20';
     selected_20h = temp;
   };
 
@@ -371,6 +408,7 @@
     let temp = selected_21h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "21";
+    hourTextBox.value='21';
     selected_21h = temp;
   };
 
@@ -378,6 +416,7 @@
     let temp = selected_22h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "22";
+    hourTextBox.value='22';
     selected_22h = temp;
   };
 
@@ -385,19 +424,21 @@
     let temp = selected_23h === "" ? "circle-me" : "";
     await clearAllSelected();
     hourdisplay.innerHTML = "23";
+    hourTextBox.value='23';
     selected_23h = temp;
   };
 </script>
 
-<!-- hours -->
+<!-- hour headder -->
 <div class="digital-container">
   <span on:click={hour24panel} bind:this={hourdisplay} id="show-24-hour"
     >12</span>
-  <!-- minutes -->
+  <!-- minutes headder -->
   <span style="color:#c79395;">:</span>
   <span on:click={minutepanel} bind:this={minutedisplay} id="show-minutes"
     >27</span>
 </div>
+
 <div class="watch-container">
   <div class="watch">
     <card bind:this={hour12card} id="hour12-card">
@@ -657,12 +698,19 @@
           id="40m">40
         </span>
       </div>
-    </card>
-  </div>
 
+    </card>
+    
+  </div>
+  
   <button class="save-button">Save</button>
 
 </div>
+
+<!-- nori -->
+<div> <input bind:this={hourTextBox} id='hourtime' type='text' name='shifttime' value="08" /> </div>
+<div> <input bind:this={minuteTextBox} id='minutetime' type='text' name='shifttime' value="00" /> </div>
+
 
 <style>
 
@@ -673,7 +721,6 @@
     border: 3px solid navy;
     padding: 7px;
   }
-  
   .circle-me {
     position: relative;
     width: 60px;
@@ -730,7 +777,6 @@
     left: 15%;
     top: 15%;
   }
-
   .numbers {
     position: absolute;
     display: block;
